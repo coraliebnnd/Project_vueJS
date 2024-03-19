@@ -5,7 +5,6 @@
           <li><a href="">Categories</a></li>
         </nav>
         <p>Find your art</p>
-        <Search></Search>
     </header>
 </template>
 

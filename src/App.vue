@@ -1,15 +1,17 @@
 <script setup>
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
-import Categorie from "./components/Categorie.vue"
+import Gallery from "./components/Gallery.vue"
 import Discover from "./components/Discover.vue"
+
 </script>
 
 <template>
   <Header></Header>
   <div>
       <h1>Categories</h1>
-      <Categorie></Categorie>
+      <Gallery>
+      </Gallery>
   </div>
   <div>
     <h1>Discover</h1>
