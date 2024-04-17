@@ -1,33 +1,36 @@
 <template>
     <header>
-        <nav>
-          <li><a href="">About</a></li>
-          <li><a href="">Categories</a></li>
-        </nav>
-        <p>Find your art</p>
+        <h1>Valorant agents</h1>
+        <button v-on:click="returnHome">Home</button>
     </header>
 </template>
 
 <script>
-import Search from "./Search.vue"
 
 export default{
   name : 'Header',
-  components : {
-    Search
+  methods:{
+    returnHome() {
+      this.$router.push({ name: 'Gallery' });
+    }
   }
 }
 </script>
 
 <style scoped>
   header{
-    background-color: #85553D;
-    color: antiquewhite;
+    background-color: #bd3944;
+    color: #fffbf5;
     height: fit-content;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     min-width: 100vw;
     justify-content: space-around;
+    font-size: x-large;
+  }
+
+  a{
+    color:#fffbf5;
   }
 
   li{

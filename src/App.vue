@@ -1,29 +1,20 @@
 <script setup>
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
-import Gallery from "./components/Gallery.vue"
-import Discover from "./components/Discover.vue"
+import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 
 <template>
   <Header></Header>
-  <div>
-      <h1>Categories</h1>
-      <Gallery>
-      </Gallery>
-  </div>
-  <div>
-    <h1>Discover</h1>
-    <Discover></Discover>
-  </div>
+  <RouterView />
   <Footer></Footer>
 </template>
 
 <style>
 body{
-  color : #85553D;
-  background-color: #F5EBC7;
+  color : #000000;
+  background-color: #fffbf5;
   text-align: center;
 }
 
