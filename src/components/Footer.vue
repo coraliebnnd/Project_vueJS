@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Voici mon footer</p>
+        <p>footer</p>
     </footer>
 </template>
 
@@ -13,5 +13,6 @@ export default{
 <style scoped>
 footer{
   min-width: 100vw;
+  background-color:  #53212b ;
 }
 </style>

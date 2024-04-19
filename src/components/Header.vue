@@ -26,7 +26,7 @@ export default{
     display: flex;
     min-width: 100vw;
     justify-content: space-around;
-    font-size: x-large;
+    font-size: large;
   }
 
   a{
