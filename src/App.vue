@@ -6,9 +6,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <Header></Header>
-  <RouterView />
-  <Footer></Footer>
+    <Header></Header>
+    <RouterView />
+    <Footer></Footer>
 </template>
 
 <style>

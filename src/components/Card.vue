@@ -63,7 +63,7 @@ export default{
 .role img{
   width: 50px;
   padding: 10%;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.74);
   border-radius: 10%;
 }
 

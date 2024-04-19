@@ -13,17 +13,17 @@
             <div class="imageDiv">
                 <img v-bind:src="agent.role.displayIcon" alt="role">
             </div>
-            <p>{{ agent.role.displayName }}</p>
+            <p class="title">{{ agent.role.displayName }}</p>
             <p>{{ agent.role.description }}</p>
         </div>
 
         <div class="abilities">
-            <div  v-for="ability in agent.abilities" :key="ability.slot">
-                <p class="title"> {{ ability.displayName }} </p>
-                <p class="description">{{ ability.description }}</p>
+            <div class="ability" v-for="ability in agent.abilities" :key="ability.slot">
                 <div class="imageDiv">
                     <img v-bind:src="ability.displayIcon" alt="icon">
                 </div>
+                <p class="title"> {{ ability.displayName }} </p>
+                <p class="description">{{ ability.description }}</p>
             </div>
         </div>
 
@@ -63,33 +63,35 @@
 
 <style scoped>
 .details{
-    margin: auto;
     text-align: center;
-    vertical-align: middle;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
+    grid-auto-rows: auto;
+    max-width: 100vw;
+    margin: 0;
+    overflow: hidden;
 }
 
 .imageDiv{
     max-width: 100px;
+    margin: auto;
 }
 
 .imageDiv img{
     width: 50px;
   padding: 10%;
-  background-color: grey;
+  background-color:  #7e595981 ;
   border-radius: 10%;
 }
 
 .image{
-    width: 25vw;
+    width: 24vw;
     height: 35vw;
     margin: auto;
     background-size: contain;
     border-radius: 10px;
     grid-column: 3 / 4;
-    grid-row: 1 / 7;
+    grid-row: 1 / 4;
 }
 
 .image img{
@@ -102,8 +104,17 @@
 
 .abilities{
     grid-column: 1/3;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+    display: flex;
+    margin: auto;
+}
+
+.abilities img{
+    width: 6vw;
+}
+
+.ability{
+    flex: 1;
+    margin-left: 20px;
 }
 
 .title{
@@ -113,11 +124,13 @@
 .descriptionDiv{
     grid-column: 1/2;
     padding: 50px;
+    font-size: x-large;
 }
 
 .role{
     grid-column: 2/3;
     padding: 50px;
+    font-size:larger;
 }
 
 .titleDiv{

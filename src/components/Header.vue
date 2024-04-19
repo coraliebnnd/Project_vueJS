@@ -1,7 +1,8 @@
 <template>
-    <header>
+    <header :class="mode">
         <h1>Valorant agents</h1>
         <button v-on:click="returnHome">Home</button>
+        <button v-on:click="changeMode">{{ mode }}</button>
     </header>
 </template>
 
@@ -12,8 +13,21 @@ export default{
   methods:{
     returnHome() {
       this.$router.push({ name: 'Gallery' });
+    },
+    changeMode(){
+      if(this.mode == "light"){
+        this.mode = "dark"
+      }else{
+        this.mode = "light"
+      }
+      localStorage.setItem("mode", this.mode);
     }
-  }
+  },
+  data() {
+        return {
+          mode: localStorage.getItem("mode") || "light"
+          }
+        }
 }
 </script>
 
@@ -27,6 +41,10 @@ export default{
     min-width: 100vw;
     justify-content: space-around;
     font-size: large;
+  }
+
+  .dark{
+    background-color:  #53212b ;
   }
 
   a{
