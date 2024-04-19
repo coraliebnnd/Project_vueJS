@@ -19,7 +19,7 @@
 
         <div class="abilities">
             <div class="ability" v-for="ability in agent.abilities" :key="ability.slot">
-                <div class="imageDiv">
+                <div class="imageDiv" v-if="ability.displayIcon">
                     <img v-bind:src="ability.displayIcon" alt="icon">
                 </div>
                 <p class="title"> {{ ability.displayName }} </p>
